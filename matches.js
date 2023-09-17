@@ -8,6 +8,13 @@ function onMutation(mutations) {
           (child) => child.nodeName === "UL"
         );
         console.log(includesUl, "includesUl");
+        if (
+          typeof includesUl !== "undefined" &&
+          includesUl.getAttribute("data-testid") === "desktop-search"
+        ) {
+          const listings = [...includesUl.childNodes];
+          console.log(listings, "listings");
+        }
       }
     }
   }
