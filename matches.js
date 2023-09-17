@@ -4,7 +4,10 @@ function onMutation(mutations) {
   for (let mutation of mutations) {
     if (mutation.type === "childList") {
       for (let node of mutation.addedNodes) {
-        console.log(node, "was added");
+        const includesUl = [...node.childNodes].find(
+          (child) => child.nodeName === "UL"
+        );
+        console.log(includesUl, "includesUl");
       }
     }
   }
