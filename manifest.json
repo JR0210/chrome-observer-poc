@@ -1,0 +1,12 @@
+{
+  "name": "Chrome Observer POC",
+  "version": "1.0.0",
+  "description": "Chrome Observer POC",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["matches.js"]
+    }
+  ]
+}
